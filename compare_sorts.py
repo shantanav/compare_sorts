@@ -11,13 +11,6 @@ import matplotlib.pyplot as plt # 'pip install matplotlib' to use this module
 
 import insertion_sort, quick_sort, merge_sort, selection_sort
 # To add more: Ayy lmao file with sort, and add sorting function to list below
-SORTS = [
-    insertion_sort.insertion_sort, 
-    quick_sort.quick_sort, 
-    merge_sort.merge_sort, 
-    selection_sort.selection_sort,
-]
-
 
 # Modify the following values to alter testing conditions
 # Modify the following values to alter testing conditions
@@ -30,7 +23,19 @@ RANGE_MIN = 0
 RANGE_MAX = 100 # Random number generation range MAX
 
 
-def generate_data(sample_size, init, step):
+def sort_lst(L: list):
+    return L.sort()
+
+SORTS = [
+    insertion_sort.insertion_sort, 
+    quick_sort.quick_sort, 
+    merge_sort.merge_sort, 
+    selection_sort.selection_sort,
+    sort_lst,
+    sorted
+]
+
+def generate_data(sample_size: int, init: int, step: int) -> None:
     """
     Determine the running time of sorting algorithms
     ----Pre Conditions:
