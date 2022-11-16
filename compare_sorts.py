@@ -10,10 +10,7 @@ import matplotlib.pyplot as plt # 'pip install matplotlib' to use this module
 
 
 import insertion_sort, quick_sort, merge_sort, selection_sort
-# To add more: Ayy lmao file with sort, and add sorting function to list below
-
-# Modify the following values to alter testing conditions
-# Modify the following values to alter testing conditions
+# To add more: ensure file with sort exists in directory, and add sorting function to list below
 
 SAMPLE_SIZE = int(sys.argv[1]) # Number of iterations to be tested
 INITIAL = int(sys.argv[2]) # Initial value 
@@ -22,17 +19,11 @@ STEP = int(sys.argv[3]) # Incrementer
 RANGE_MIN = 0
 RANGE_MAX = 100 # Random number generation range MAX
 
-
-def sort_lst(L: list):
-    return L.sort()
-
 SORTS = [
     insertion_sort.insertion_sort, 
     quick_sort.quick_sort, 
     merge_sort.merge_sort, 
     selection_sort.selection_sort,
-    sort_lst,
-    sorted
 ]
 
 def generate_data(sample_size: int, init: int, step: int) -> None:
@@ -111,3 +102,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
